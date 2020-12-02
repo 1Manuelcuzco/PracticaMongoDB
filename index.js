@@ -12,6 +12,8 @@ app.use(express.json());
 
 dbconection();
 
+app.use(express.static('public'));
+
 app.use('/api/usuarios', require('./routes/usuariosRoute'));
 app.use('/api/pacientes', require('./routes/pacientesRoute'));
 app.use('/api/odontograma', require('./routes/odontogramaRoute'));
